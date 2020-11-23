@@ -35,9 +35,9 @@ const userScheme = new mongoose.Schema({
   },
   age: {
     type: Number,
-    required: true,
+    required: false,
     validate(age) {
-      if (age < 0) {
+      if (age <= 0) {
         throw new Error("Age must be vaild number");
       }
     },
